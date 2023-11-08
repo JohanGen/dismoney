@@ -41,6 +41,8 @@ ny_verdi = 0
 sikkerhet = 0
 while True:
     open_discord_channel()
+    sikkerhet += 1
+    endring = sikkerhet
 
     # venter på at tatsu oppdaterer credits
     time.sleep(5)
@@ -59,6 +61,8 @@ while True:
     if ny_verdi < 0:
         ny_verdi = 0
 
+    if sikkerhet == 300:
+        break
     if gammel_verdi < current_credits:
         if ny_verdi <= 10:
             pyautogui.typewrite('t!slots') #+ str(ny_verdi))
@@ -68,12 +72,10 @@ while True:
             pyautogui.press('enter')
             ny_verdi = 1
     else:
-        pyautogui.typewrite('t!slots')
-        pyautogui.press('enter')
+        # pyautogui.typewrite('t!slots')
+        # pyautogui.press('enter')
         ny_verdi = 1
         sikkerhet += 1
-        if sikkerhet == 10:
-            break
     
 
 
@@ -85,6 +87,9 @@ while True:
     ny_verdi = 0
 
     print(gammel_verdi)
+
+    if endring < sikkerhet:
+        print('Sikkerhet: ', sikkerhet)
 
     # venter 2 min på neste kjøring (115 + 5)
     time.sleep(115)
