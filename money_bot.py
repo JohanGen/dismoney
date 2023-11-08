@@ -4,7 +4,7 @@ import pytesseract
 
 icon_location = pyautogui.locateCenterOnScreen('C:/Users/johan/OneDrive/Dokumenter/dismoney/target_chat.png')
 message = "t!wallet"
-pytesseract.pytesseract.tesseract_cmd = r'D:\bildefinner\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'C:/Users/johan/OneDrive/Dokumenter/dismoney/bildefinner/tesseract.exe'
 
 gammel_verdi = 3294
 
